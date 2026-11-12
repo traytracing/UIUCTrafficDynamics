@@ -1,8 +1,9 @@
-import numpy as npyplot as plt
+import numpy as np
+import pyplot as plt
+from scipy.integrate import solve_ivp
 
 class Road:
-    de
-import scipyf __init__(self, stopsigns, cars, n = 2):
+    def __init__(self, stopsigns, cars, n = 2):
         self.roadData = [0] * n
         for i in range(n):
             self.roadData[i] = 0
@@ -22,12 +23,8 @@ class Car:
         self.a = a # acceleration
         self.tau = tau # reaction time
 
-    def step_x(dt):
-        self.x += self.v*dt + 0.5*self.a*dt**2
-        
-        
-    def step_v(dt):
-        self.v = self.a*dt  
+    def step(self, dt):
+        sol_x = solve_ivp(v, )
     
     
 
