@@ -17,14 +17,22 @@ class Road:
 
 class Car:
     
+    x : float
+    v : float
+    a : float
+    tau : float
+
     def __init__(self, x=0, v=0, a=0, tau=0):
         self.x = x # position
         self.v = v # velocity
         self.a = a # acceleration
         self.tau = tau # reaction time
 
+    def accel_simple(self, t, y):
+        return self.a
+
     def step(self, dt):
-        sol_x = solve_ivp(v, )
+        sol_x = solve_ivp(accel_simple, (0,10), )
     
     
 
